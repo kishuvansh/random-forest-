@@ -68,37 +68,44 @@ pip install jupyter pandas scikit-learn matplotlib
     ```
 
 # Methodology
-Data Loading and Exploration
+**Data Loading and Exploration**  
 
 The dataset (diabetes_prediction_dataset.csv) is loaded and the relevant clinical features are inspected.
-Data Preprocessing
+**Data Preprocessing**
 
-Handling Categorical Variables:
-The gender column is encoded using label encoding (Male=1, Female=0).
-The smoking_history column is transformed using one-hot encoding.
-Handling Missing Values:
-(If missing values exist, describe how they are handled. If not, this can be omitted or state that the dataset had no missing values.)
-Feature Scaling:
+**Handling Categorical Variables:**
+- The gender column is encoded using label encoding (Male=1, Female=0).
+- The smoking_history column is transformed using one-hot encoding.
+
+**Handling Missing Values:**
+(If missing values exist, describe how they are handled. If not, this can be omitted or state that the dataset had no missing values.)  
+
+**Feature Scaling:**
 Numerical columns (age, bmi, HbA1c_level, blood_glucose_level) are standardized using StandardScaler.
 Feature and Target Selection
 
 Features (X) are selected by dropping the diabetes column.
 The target variable (y) is the diabetes column.
 Splitting the Dataset
+- The data is split into training (80%) and testing (20%) sets using train_test_split.  
 
-The data is split into training (80%) and testing (20%) sets using train_test_split.
-Model Training
+**Model Training**
 
 A Random Forest Classifier (RandomForestClassifier from scikit-learn) is initialized with 100 trees and trained on the training data.
 Model Evaluation
 
 The model’s performance is evaluated on the test set using:
-Accuracy score
-Confusion matrix
-Classification report (precision, recall, f1-score)
-Prediction
+- Accuracy score
+- Confusion matrix
+- Classification report (precision, recall, f1-score)
+- Prediction
 
 The trained model can be used to make predictions on new/unseen data by providing input in the same format as the features.
 
 
 # Result
+Performence of Random forest classifier.  
+
+![image](https://github.com/user-attachments/assets/df644ffe-ffec-454e-a182-27040e1875c8)  
+
+By using Random forest our model is 97% accurate .
